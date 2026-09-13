@@ -1,0 +1,39 @@
+# Python virtual environments
+.venv/
+venv/
+env/
+
+# Python cache and generated files
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Jupyter generated checkpoints
+.ipynb_checkpoints/
+
+# Local secrets and environment configuration
+.env
+.env.*
+!.env.example
+
+# Operating system and editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Logs and local runtime files
+*.log
+*.pid
+
+# Build and distribution output
+build/
+dist/
+*.egg-info/
+
+# Keep these project assets tracked because the app uses them:
+# Mental_Health_Model.pkl
+# Student Social Media And Mental Health Impact.csv

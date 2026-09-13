@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MindMetric | Student wellbeing signal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <main class="shell">
+    <header class="topbar"><a class="brand" href="/" aria-label="MindMetric home"><span class="brand-mark">M</span><span>mindmetric</span></a><span class="status"><i></i> Model online</span></header>
+    <section class="intro"><div><p class="eyebrow">Student wellbeing signal / 01</p><h1>Make space for<br><em>better balance.</em></h1><p class="lede">A quick, data-informed read on how daily routines and social media habits may shape a student’s mental health score.</p></div><div class="intro-note"><span>12</span><small>signals<br>measured</small></div></section>
+    <section class="workspace">
+      <form id="profile-form" class="form-panel">
+        <div class="panel-heading"><div><p class="eyebrow">Your profile</p><h2>Tell us about the day.</h2></div><span class="step">01 / 02</span></div>
+        <div class="form-grid">
+          <label>Age<input name="age" type="number" min="13" max="100" value="21" required></label>
+          <label>Gender<select name="gender" data-options="genders" required></select></label>
+          <label>Country<select name="country" data-options="countries" required></select></label>
+          <label>Academic level<select name="academic_level" data-options="academic_levels" required></select></label>
+          <label>Most used platform<select name="platform" data-options="platforms" required></select></label>
+          <label>Primary purpose<select name="purpose" data-options="purposes" required></select></label>
+          <label>Daily social media use <span class="unit">hours</span><input name="daily_usage_hours" type="number" min="0" max="24" step="0.1" value="4.5" required></label>
+          <label>Daily unlocks<input name="daily_unlocks" type="number" min="0" max="1000" value="120" required></label>
+          <label>Study time <span class="unit">hours</span><input name="study_hours" type="number" min="0" max="24" step="0.1" value="4" required></label>
+          <label>Movement <span class="unit">hours</span><input name="physical_activity_hours" type="number" min="0" max="24" step="0.1" value="1.5" required></label>
+          <label>Sleep <span class="unit">hours</span><input name="sleep_hours" type="number" min="0" max="24" step="0.1" value="7" required></label>
+          <label>Current stress<select name="stress_level" data-options="stress_levels" required></select></label>
+        </div>
+        <button class="submit-button" type="submit"><span>Calculate my signal</span><b>↗</b></button><p class="disclaimer">This is an educational model, not a clinical assessment.</p>
+      </form>
+      <aside class="result-panel" aria-live="polite">
+        <div class="result-top"><p class="eyebrow">Your readout</p><span class="result-index">02</span></div>
+        <div id="empty-state" class="empty-state"><div class="orbit"><span>✦</span></div><h3>Your signal<br>will appear here.</h3><p>Complete the profile to see a model-generated score out of 10.</p></div>
+        <div id="result-state" class="result-state hidden"><div class="score-ring"><div><strong id="score">--</strong><span>/ 10</span></div></div><p class="result-label">Mental health score</p><h3 id="outlook">Balanced</h3><p class="result-copy">Your signal reflects the relationship between routine, stress, rest, and online habits in this model.</p><button type="button" class="reset-button" id="reset-button">Adjust profile <span>↗</span></button></div>
+        <p class="model-note"><span>●</span> Random Forest regression / trained on student lifestyle data</p>
+      </aside>
+    </section>
+    <footer><span>MindMetric</span><span>For reflection, not diagnosis</span><span>2026</span></footer>
+  </main>
+  <script src="/static/app.js"></script>
+</body>
+</html>
