@@ -56,10 +56,6 @@ The included virtual environment is named `.venv`. You can use it, or create a n
 
 Open a terminal in the project directory:
 
-```bash
-cd "/home/arya/Projects/Machine Learning/MindMetric"
-```
-
 ### 1. Activate the virtual environment
 
 Linux/macOS:
